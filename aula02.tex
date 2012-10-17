@@ -4,8 +4,8 @@
 \usepackage[T1]{fontenc} % Permite copiar
 \usepackage{verbatim}
 \usepackage{amsmath}
-\usepackage{graphicx}
 \usepackage{float}
+\usepackage{graphicx}
 
 \author{Albert}
 \title{Aula 1}
@@ -50,13 +50,47 @@ To use references. Lets asssume the equation:
 \end{displaymath}
 According to the reference \ref{eq:pitagoras2}
 
-
 \[
  z = \overbrace{
    \underbrace{x}_\text{real} +
    \underbrace{iy}_\text{imaginary}
   }^\text{complex number}
 \]
+
+\[
+\sum_{i=1}^n x_i^2
+\]
+
+\[
+I =
+\left(
+\begin{array}{cccc}
+1 & 0 & \ldots & 0 \\
+0 & 1 & & 0 \\
+\vdots & & \ddots & \vdots \\
+0 & 0 & \ldots & 1
+\end{array}
+\right)
+= \left(\delta_{ij}\right)
+\]
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{|l|c|r| p{0.25\linewidth} |}
+\hline
+Column1 & Column2 & Christmas \\
+\hline
+A1 & B1 & C1 \\
+\hline
+A2 & B2 & C2 \\
+\hline
+A3 & B3 & C3 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Tabela}
+\label{tab:tabela-letras}
+\end{table*}
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{funny-pic}\caption{Funny pic}
