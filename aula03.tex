@@ -17,10 +17,18 @@
 \section*{Aula 03 - Content}
 \input{aula03content.tex}
 
+Blablabla said Nobody ~\cite{einstein1950bed}.
+
 \newcommand{\aliasl}{ls -la}
 \aliasl
 
-\bibliography{bibli03}
-\bibliographystyle{simple}
+\bibliography{bib03}{}
+\bibliographystyle{plain}
+
+% At the shell execute:
+% latex bibli03.tex
+% bibtex bibli03.tex
+% latex bibli03.tex
+% latex bibli03.tex
 
 \end{document}
