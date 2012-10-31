@@ -1,0 +1,24 @@
+\documentclass[a4paper]{article}
+\usepackage{verbatim}
+\usepackage{listings}
+
+\include{pythonlisting}
+
+\begin{document}
+
+Then, to render code, use python sections:
+
+\begin{python}
+    def initparser(self, ModelClass):#, ParserClass):
+        # Public
+        # Init structures
+        if ModelClass is rbm1.ReqBoxModel:
+            ParserClass = rfp1.ReqBoxFileParser
+        elif ModelClass is rbm2.ReqBoxModelNG:
+            ParserClass = rfp2.ReqBoxFileParserNG
+        self.model = ModelClass(ParserClass)
+        #self.model = rbm.ReqBoxModel(ParserClass)
+        if ParserClass is rfp2.ReqBoxFileParserNG:
+            self.model.fp.importsdir = './data/'
+\end{python}
+\end{document}
