@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+
+% It's a good practice to include all newcommands at the beginning of the document
+\newcommand{\RFB}{Republica Federativa do Brasil}
+\newcommand{\eng}[1]{\textit{#1}}
+
+%\newcommand{\commandname}[# or arguments]{•}
+\newcommand{\lista}[2]{
+	\begin{itemize}
+		\item #1
+		\item #2
+	\end{itemize}
+	}
+	
+\newcommand{\arrow}[2]{
+	\begin{itemize}
+		#1 \rightarrow #2
+	\end{itemize}
+	}
+	
+\newcommand{\twoarrow}[3]{
+	\begin{itemize}
+		#1 \rightarrow #2 \rightarrow #3
+	\end{itemize}
+	}
+	
+\begin{document}
+	\RFB
+	
+	\eng{School}
+	
+	\lista{a} {b}
+	
+	\arrow{c} {d}
+	
+	\twoarrow{e} {f} {g}
+\end{document}
