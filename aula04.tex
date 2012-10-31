@@ -1,4 +1,6 @@
 \documentclass[a4paper]{article}
+\usepackage{verbatim}
+\usepackage{listings}
 
 % It's a good practice to include all newcommands at the beginning of the document
 \newcommand{\RFB}{Republica Federativa do Brasil}
@@ -34,4 +36,44 @@
 	\arrow{c} {d}
 	
 	\twoarrow{e} {f} {g}
+	\\
+	
+	text\\
+	\texttt{               text true type}\\
+	\verb|      a\\
+	\\
+	\begin{verbatim}
+    def initparser(self, ModelClass):#, ParserClass):
+        # Public
+        # Init structures
+        if ModelClass is rbm1.ReqBoxModel:
+            ParserClass = rfp1.ReqBoxFileParser
+        elif ModelClass is rbm2.ReqBoxModelNG:
+            ParserClass = rfp2.ReqBoxFileParserNG
+        self.model = ModelClass(ParserClass)
+        #self.model = rbm.ReqBoxModel(ParserClass)
+        if ParserClass is rfp2.ReqBoxFileParserNG:
+            self.model.fp.importsdir = './data/'
+	\end{verbatim}
+	
+	
+	\begin{lstlisting}[language=python]
+    def initparser(self, ModelClass):#, ParserClass):
+        # Public
+        # Init structures
+        if ModelClass is rbm1.ReqBoxModel:
+            ParserClass = rfp1.ReqBoxFileParser
+        elif ModelClass is rbm2.ReqBoxModelNG:
+            ParserClass = rfp2.ReqBoxFileParserNG
+        self.model = ModelClass(ParserClass)
+        #self.model = rbm.ReqBoxModel(ParserClass)
+        if ParserClass is rfp2.ReqBoxFileParserNG:
+            self.model.fp.importsdir = './data/'
+	\end{lstlisting}
+	
+	To manually compile use:
+	\begin{lstlisting}[language=bash]
+	latex aula03.tex
+	pdflatex aula03
+	\end{lstlisting}
 \end{document}
